@@ -7,6 +7,8 @@ import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 
 
+
+
 const Home = () => {
     const [productsBySell, setProductsBySell] = useState([]);
     const [productsByArrival, setProductsByArrival] = useState([]);
@@ -45,9 +47,9 @@ const Home = () => {
             description="#1 Source for Sports Cards"
             className="container-fluid"   
         >
-     
+        <Fade left>
             <Search />
-
+</Fade>
            
            <div className="row">
                 {productsByArrival.map((product, i) => (
@@ -59,7 +61,8 @@ const Home = () => {
                  
                 ))}
                 </div>
-              
+
+
 {/*
             <h2 className="mb-4">Best Sellers</h2>
             <div className="row">

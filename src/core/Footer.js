@@ -25,7 +25,7 @@ function Footer() {
             <h4>Contacts</h4>
             <img src={socials} className="socials" />
             <ui className="list-unstyled">
-              <li>@bullishbreak@yahoo.com</li>
+              <li>BullishBreak@yahoo.com</li>
               <li>OTHER STUFF</li>
               <li>GUD STUFF</li>
             </ui>
@@ -35,8 +35,6 @@ function Footer() {
           <h4>Social Media</h4>
             <ui className="list-unstyled">
             <a href="https://www.instagram.com/bullishbreaks/"><InstagramIcon className="fab fa-instagram" style={{ fontSize: 50, color: "gold" }} /></a>
-
-              <li>GUD STUFF</li>
             </ui>
 
           </div>

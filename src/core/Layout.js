@@ -1,15 +1,9 @@
-import React from "react";
-import ImageSlider from './ImageSlider';
-import { SliderData } from './SliderData';
+import React, {useState} from "react";
+import background from "../assets/background.png";
 import "../styles.css";
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Footer from './Footer';
 import YouTube from "./Youtube";
-
-
-
-
-
 
 const Layout = ({
     title = "Title",
@@ -17,18 +11,23 @@ const Layout = ({
     className,
     children
 }) => (
+
+
+
+
     <div className="every">
-        <Header/>
+               <Navbar />
         <div className="jumbotron">
             <h2>{title}</h2>
             <p className="lead">{description}</p>
         </div>
        
         <div className={className}>{children}</div>
-   
-        <div>
-        <ImageSlider slides={SliderData} />
-        </div>
+
+
+
+
+
         <div className="Vids">
 
         <YouTube 
@@ -37,7 +36,9 @@ const Layout = ({
 
         <YouTube videoId='0ZsO3PgRbDY'/>
         </div>
-  
+        <div style={{height:'4rem', backgroundImage: `url(${background})`, backgroundColor: '#fc8621'}}>
+        </div>
+
         <Footer />
     </div>
  

@@ -12,7 +12,12 @@ body{
     border-radius: 0px;
 }
 
-/* cart badge */
+.header-nav-item{
+    font-size: 2rem;
+    margin-left: auto;
+    padding: 1rem;
+    color: #0a043c;
+}
 
 .cart-badge,
 .cart-badge:hover {
@@ -20,7 +25,7 @@ body{
     padding: 2px;
     font-size: 12px;
     font-style: italic;
-    background: #000;
+    background: #ffd56b;
 }
 /**
  * single product page - product name
@@ -221,14 +226,14 @@ h2 {
 }
 
 .Vids {
-    position: relative;
+    position: static;
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    margin-top: 3rem;
+    margin-top: 2.3rem;
 }
 
 @media (max-width: 800px) {
@@ -239,10 +244,12 @@ h2 {
   }
 
 
-
+.form-group {
+    margin-bottom: 2rem;
+}
 
   .every {
-      max-width: 100%;
+      max-width: auto;
   }
 
 

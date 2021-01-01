@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react';
 import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
 import { itemTotal } from "./cartHelpers";
-import './Header.scss';
+import './Header.css';
 
 
 
@@ -50,9 +50,9 @@ const Header = ({ history }) => {
             <span className="bar"></span>
             <span className="bar"></span>
           </div>
-          <ul className={`${navClass ? 'header-nav header-mobile-nav' : 'header-nav'}`}>
-       
-          <li className="header-nav-item">
+          <p className={`${navClass ? 'header-nav header-mobile-nav' : 'header-nav'}`}>
+     
+          <a className="header-nav-item">
           
                 <Link
                     className="nav-link"
@@ -62,10 +62,9 @@ const Header = ({ history }) => {
                     Home
                 </Link>
                 
-            </li>
-            
-           
-            <li className="header-nav-item">
+            </a>
+          
+            <a className="header-nav-item">
             
                 <Link
                     className="nav-link"
@@ -75,9 +74,9 @@ const Header = ({ history }) => {
                     Shop
                 </Link>
                 
-            </li>
-
-            <li className="header-nav-item">
+            </a>
+         
+            <a className="header-nav-item">
                 <Link
                     className="nav-link"
                     style={isActive(history, "/cart")}
@@ -88,10 +87,10 @@ const Header = ({ history }) => {
                         <small className="cart-badge">{itemTotal()}</small>
                     </sup>
                 </Link>
-            </li>
-
+            </a>
+       
             {isAuthenticated() && isAuthenticated().user.role === 0 && (
-                <li className="header-nav-item">
+                <a className="header-nav-item">
                     <Link
                         className="nav-link"
                         style={isActive(history, "/user/dashboard")}
@@ -99,11 +98,11 @@ const Header = ({ history }) => {
                     >
                         Dash
                     </Link>
-                </li>
+                </a>
             )}
 
             {isAuthenticated() && isAuthenticated().user.role === 1 && (
-                <li className="header-nav-item">
+                <a className="header-nav-item">
              
                     <Link
                         className="nav-link"
@@ -113,12 +112,12 @@ const Header = ({ history }) => {
                         Dashboard
                     </Link>
                  
-                </li>
+                </a>
             )}
 
             {!isAuthenticated() && (
                 <Fragment>
-                    <li className="header-nav-item">
+                    <a className="header-nav-item">
                         <Link
                             className="nav-link"
                             style={isActive(history, "/signin")}
@@ -126,9 +125,9 @@ const Header = ({ history }) => {
                         >
                             Signin
                         </Link>
-                    </li>
+                    </a>
 
-                    <li className="header-nav-item">
+                    <a className="header-nav-item">
                         <Link
                             className="nav-link"
                             style={isActive(history, "/signup")}
@@ -136,15 +135,15 @@ const Header = ({ history }) => {
                         >
                             Signup
                         </Link>
-                    </li>
+                    </a>
                 </Fragment>
             )}
 
             {isAuthenticated() && (
-                <li className="header-nav-item">
+                <a className="header-nav-item">
                     <span
                         className="nav-link"
-                        style={{ cursor: "pointer", color: "#ffffff" }}
+                        style={{ cursor: "pointer" }}
                         onClick={() =>
                             signout(() => {
                                 history.push("/");
@@ -153,7 +152,7 @@ const Header = ({ history }) => {
                     >
                         Signout
                     </span>
-                </li>
+                </a>
             )}
 
 
@@ -177,7 +176,7 @@ const Header = ({ history }) => {
               )
            */ }
 
-          </ul>
+          </p>
         </div>
       </div>
     </>
