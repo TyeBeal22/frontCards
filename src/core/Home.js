@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './Layout';
 import { getProducts } from './apiCore';
+import sports from '../assets/Sports.png';
 import Card from './Card';
 import Search from './Search';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import "../styles.css";
-
+import YouTube from "./Youtube";
 
 
 const Home = () => {
@@ -60,8 +61,9 @@ const Home = () => {
                  
                 ))}
                 </div>
-
-
+                <div className="Vids" style={{backgroundImage: `url(${sports})`,backgroundColor: 'blue'}}>
+                    
+                  </div>
 {/*
             <h2 className="mb-4">Best Sellers</h2>
             <div className="row">

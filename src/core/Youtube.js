@@ -12,8 +12,8 @@ class Youtube extends React.Component {
 
   render() {
     const opts = {
-      height: '370',
-      width: '430rem',
+      height: '420',
+      width: '90%',
       playerVars: {
         autoplay: 1,
       },
@@ -23,7 +23,7 @@ class Youtube extends React.Component {
 
  
     const {videoId} = this.props
-    return <YouTube videoId={videoId} opts={opts} onReady={this.VideoOnReady} className="play" />;
+    return <YouTube videoId={videoId} opts={opts} onReady={this.VideoOnReady} />;
   }
  
 }
