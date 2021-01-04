@@ -6,6 +6,7 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import { Link } from "react-router-dom";
 import {animateScroll as scroll} from 'react-scroll'
 
+
 function Footer() {
   return (
     <div className="main-footer">
@@ -26,8 +27,8 @@ function Footer() {
             <img src={socials} className="socials" />
             <ui className="list-unstyled">
               <li>BullishBreak@yahoo.com</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
+       
+           
             </ui>
           </div>
           {/* Column3 */}
@@ -43,7 +44,7 @@ function Footer() {
         <hr />
         <div className="row">
           <p className="col-sm bottom">
-            &copy;{new Date().getFullYear()} Designed by | MutationCode LLC |
+            &copy;{new Date().getFullYear()} Developed by | MutationCode LLC |
             Terms Of Service | Privacy
           </p>
         </div>

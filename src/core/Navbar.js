@@ -43,14 +43,14 @@ function ElevationScroll(props) {
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
-    marginBottom: "2.3em",
+    marginBottom: "2.1em",
     [theme.breakpoints.down("md")]: {
       marginBottom: "1.6em"
     }
 
   },
   logo: {
-    height: "6.3em",
+    height: "6.2em",
     [theme.breakpoints.down("md")]: {
       height: "5.5em"
     },
@@ -70,12 +70,11 @@ const useStyles = makeStyles(theme => ({
   tab: {
     fontFamily: "Raleway",
     minWidth: 12,
-    padding: "1rem",
+    padding: "1.5rem",
 
     "&:hover": {
-      backgroundColor: "gold",
-      borderRadius: "4rem",
-      textDecoration: "none"
+      textDecoration: "none",
+      color: "#cdac81",
     }
 
   },
@@ -156,7 +155,8 @@ export default function Navbar(props) {
         ariaPopup: anchorEl ? "true" : undefined,
         mouseOver: event => handleClick(event)
       },
-      { name: "Sign In", link: "/signin", activeIndex: 2 },
+      { name: "Sign In", link: "/signin", activeIndex: 2
+    },
       { name: "Sign Up", link: "/signup", activeIndex: 3 }
     ];
 
@@ -295,7 +295,7 @@ const drawer = (
             divider
             button
             component={Link}
-            to="/signin"
+            to="/signup"
             selected={value === 3}
             >
             <ListItemText className={classes.drawerItem}
@@ -303,6 +303,20 @@ const drawer = (
               SignUp
             </ListItemText>
             </ListItem>
+            {isAuthenticated() && (
+            <ListItem onClick={() => signout(() => { ("/");})}
+            divider
+            button
+            component={Link}
+            to="/"
+            selected={value === 3}
+            >
+            <ListItemText className={classes.drawerItem}
+            disableTypography>
+              SignOut
+            </ListItemText>
+            </ListItem>
+            )}
           </List>
         </SwipeableDrawer>
           <IconButton className={classes.drawerIconContainer}

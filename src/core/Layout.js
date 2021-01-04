@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import background from "../assets/background.png";
+import sports from '../assets/Sports.png';
 import "../styles.css";
 import Navbar from "./Navbar";
 import Footer from './Footer';
 import YouTube from "./Youtube";
+import freak from '../assets/freak.svg';
+import {animateScroll as scroll} from 'react-scroll'
 
 const Layout = ({
     title = "Title",
@@ -25,19 +28,20 @@ const Layout = ({
         <div className={className}>{children}</div>
 
 
-
-
-
-        <div className="Vids">
+        <div className="Vids" style={{backgroundImage: `url(${sports})`,backgroundColor: 'blue'}}>
 
         <YouTube 
         videoId='0ZsO3PgRbDY'
         />
+        <div style={{paddingTop:"1rem"}}>
+        <YouTube videoId='0ZsO3PgRbDY' />
+        </div>
+        </div>
+        <div style={{height:'7rem', backgroundImage: `url(${background})`, backgroundColor: '#fc8621'}}>
+        <img src={freak} className="freak" onClick={() => scroll.scrollToTop()}/>
+        </div>
 
-        <YouTube videoId='0ZsO3PgRbDY'/>
-        </div>
-        <div style={{height:'4rem', backgroundImage: `url(${background})`, backgroundColor: '#fc8621'}}>
-        </div>
+
 
         <Footer />
     </div>

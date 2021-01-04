@@ -7,6 +7,7 @@ import RadioBox from "./RadioBox";
 import { prices } from "./fixedPrices";
 import Fade from 'react-reveal/Fade';
 
+
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
         filters: { category: [], price: [] }
@@ -102,8 +103,12 @@ const Shop = () => {
             description="Search and find sports cards!"
             className="container-fluid"
         >
-            <div className="row"  style={{ justifyContent: 'center'}}>
-                <div className="col-sm-3" style={{textAlign: 'center'}}>
+
+
+            <div className="row"  style={{ justifyContent: 'center' }}>
+            <div className="col" style={{ textAlign: 'center' }}>
+        <div className="filters" style={{float:"left",marginLeft:"40%"}}>
+        <Fade right>
                     <h4>Filter by Sport</h4>
                     <ul>
                         <Checkbox
@@ -112,10 +117,15 @@ const Shop = () => {
                                 handleFilters(filters, "category")
                             }
                         />
+                     
                     </ul>
-
-                    <h4>Filter by Prices</h4>
+                    </Fade>
+                    </div>
+                    <div className="filters1"  style={{float:"left",paddingLeft:"1rem"}}>
+                    <Fade left>
+                    <h4 style={{paddingLeft:"1rem"}}>Filter by Prices</h4>
                     <div>
+
                         <RadioBox
                             prices={prices}
                             handleFilters={filters =>
@@ -123,23 +133,27 @@ const Shop = () => {
                             }
                         />
                     </div>
-              </div>
+                    </Fade>
+                            </div>
+               
 
-              <div className="col-9">
-                    <h2 className="mb-4">Products</h2>
+              
                     <Fade right>
-                    <div className="row" >
+                    <div className="row" style={{ padding:"1rem"}}>
                         {filteredResults.map((product, i) => (
                             <div key={i} className="col-sm-3 mb-3">
                                 <Card product={product} />
                             </div>
                         ))}
+
                     </div>
                     </Fade>
                     <hr />
+                    <div className="but">
                     {loadMoreButton()}
+                    </div>
                 </div>
-                  </div> 
+                </div>
         </Layout>
     );
 };

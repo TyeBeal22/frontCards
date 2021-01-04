@@ -27,9 +27,9 @@ body{
     font-style: italic;
     background: #ffd56b;
 }
-/**
- * single product page - product name
- */
+
+
+
 
 .name {
     background: indigo;
@@ -66,6 +66,45 @@ body{
     align-items: center;
 }
 
+.shopper{
+    margin-left:40%;
+    float: left;
+    margin-bottom:3rem;
+}
+
+.sum {
+    text-align: center;
+    display: inline-block;
+    margin-left: 4rem;
+}
+
+.but {
+    margin-right: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .filters{
+        display: none;
+    }
+    .sum {
+        margin-left: 7rem;
+    }
+    .shopper {
+        margin-left: 7rem;
+    }
+    .filters1{
+        margin-left:25%;
+    }
+  }
+
+
+
+@media only screen and (max-width: 600px) {
+    .overz{
+      margin-bottom:4rem;
+      position: relative;
+    }
+  }
 
 .box {
     width:350px;
@@ -75,17 +114,17 @@ body{
 	align-items: center;
 	box-sizing: border-box;
     color: #fff;
+    background: linear-gradient(to right,#333, #52057b );
 }
 
- .product-img:hover{
-     transform: scale(1.1);
-     cursor: pointer;
- }
+
+
 
  .product-img {
     height: 22rem; /*  16rem */
 
 }
+
 
 
 
@@ -101,6 +140,15 @@ body{
       display: block;
     }
   }
+
+
+  @media only screen and (max-width: 600px) {
+    .scards{
+
+      position: relative;
+    }
+  }
+
 
 
 .jumbotron h2 {
@@ -123,7 +171,7 @@ h2 {
 .jumbotron {
     height: 180px;
     color: #fff;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #66bd47, #e73c7e, #512b58, #cfb231);
     background-size: 400% 400%;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
@@ -225,21 +273,29 @@ h2 {
     height: 7rem;
 }
 
+.freak {
+    margin-left:1.4rem;
+    height:  6rem;
+    z-index: -1;
+    cursor: pointer;
+}
+
 .Vids {
     position: static;
-    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     margin-top: 2.3rem;
+    margin-bottom:2.2rem;
 }
 
 @media (max-width: 800px) {
     .Vids {
       flex-direction: column;
-      margin-bottom: 2rem;
+      margin-bottom: 4.2rem;
+      margin-top: 4rem;
     }
   }
 
@@ -255,7 +311,13 @@ h2 {
 
   .play {
 	border-radius: 10px;
-	box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+    box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+    display: inline-block;
   }
 
 
+
+  .form-control {
+      width: 90%;
+      margin-bottom:2rem;
+  }

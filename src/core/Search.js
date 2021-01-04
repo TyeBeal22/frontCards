@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getCategories, list } from "./apiCore";
 import Card from "./Card";
+import AppBar from '@material-ui/core/AppBar';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Search = () => {
     const [data, setData] = useState({
@@ -81,7 +83,9 @@ const Search = () => {
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
             <span className="input-group-text">
-                <div className="input-group input-group-lg">
+                <div className="input-group input-group-md">
+
+                {/*
                     <div className="input-group-prepend">
                         <select
                             className="btn mr-2"
@@ -95,19 +99,19 @@ const Search = () => {
                             ))}
                         </select>
                     </div>
-
+                                */}
                     <input
                         type="search"
-                        className="form-control"
                         onChange={handleChange("search")}
                         placeholder="Search by name"
+                        className="form-control"
                     />
                 </div>
                 <div
                     className="btn input-group-append"
                     style={{ border: "none" }}
                 >
-                    <button className="input-group-text">Search</button>
+                    <button className="input-group-text"><SearchIcon /></button>
                 </div>
             </span>
         </form>

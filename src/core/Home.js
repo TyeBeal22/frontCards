@@ -5,7 +5,7 @@ import Card from './Card';
 import Search from './Search';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
-
+import "../styles.css";
 
 
 
@@ -49,8 +49,7 @@ const Home = () => {
         >
         <Fade left>
             <Search />
-</Fade>
-           
+        </Fade>
            <div className="row">
                 {productsByArrival.map((product, i) => (
                     <div key={i} className="col-sm-3 mb-3">
