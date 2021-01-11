@@ -46,16 +46,16 @@ const Cart = () => {
             className="container-fluid"
         >
            
-            <div className="shopper">
-                {items.length > 0 ? showItems(items) : noItemsMessage()}
-                </div>
+            <div className="row" style={{ justifyContent: 'center'}}>
+                <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div>
                
-                <div className="sum">
+               
+                <div className="col-6">
                 <h2 className="mb-4">Your cart summary</h2>
                     <hr />
                     <Checkout products={items} setRun={setRun} run={run}/>
                 </div>
-               
+                </div>
               
         </Layout>
     );

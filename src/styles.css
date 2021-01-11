@@ -67,7 +67,7 @@ body{
 }
 
 .shopper{
-    margin-bottom:3rem;
+    display: flex;
 }
 
 .sum {
@@ -76,8 +76,7 @@ body{
 }
 
 .but {
-    margin-left: 4rem;
-    float: left;
+    margin-right: 4rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -85,9 +84,7 @@ body{
         display: none;
     }
 
-    .filters1{
-        margin-left:25%;
-    }
+
   }
 
 
@@ -293,9 +290,7 @@ h2 {
     margin-bottom: 2rem;
 }
 
-  .every {
-      max-width: auto;
-  }
+
 
 
   .play {

@@ -7,7 +7,6 @@ import RadioBox from "./RadioBox";
 import { prices } from "./fixedPrices";
 import Fade from 'react-reveal/Fade';
 
-
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
         filters: { category: [], price: [] }
@@ -101,13 +100,13 @@ const Shop = () => {
         <Layout
             title="Shop Page"
             description="Search and find sports cards!"
-            className="container-fluid"
+            className="container-fluid col-md-8"
         >
 
 
-            <div className="row"  style={{ justifyContent: 'center' }}>
-            <div className="col" style={{ textAlign: 'center' }}>
-        <div className="filters" style={{float:"left",marginLeft:"40%"}}>
+        <div className="row"  style={{ justifyContent: 'center'}}>
+        <div className="col" style={{ textAlign: 'center' }}>
+        <div className="filters mx-auto">
         <Fade right>
                     <h4>Filter by Sport</h4>
                     <ul>
@@ -121,7 +120,7 @@ const Shop = () => {
                     </ul>
                     </Fade>
                     </div>
-                    <div className="filters1"  style={{float:"left",paddingLeft:"1rem"}}>
+                    <div className="filters1 mx-auto">
                     <Fade left>
                     <h4 style={{paddingLeft:"1rem"}}>Filter by Prices</h4>
                     <div>
@@ -134,14 +133,13 @@ const Shop = () => {
                         />
                     </div>
                     </Fade>
+                           
                             </div>
-               
 
-              
                     <Fade right>
-                    <div className="row" style={{ padding:"1rem",float:"left"}}>
+                    <div className="row" style={{ padding:"1rem"}}>
                         {filteredResults.map((product, i) => (
-                            <div key={i} className="col-sm-3 mb-3">
+                            <div key={i} className="col-md-4 mb-3" >
                                 <Card product={product} />
                             </div>
                         ))}
@@ -152,8 +150,9 @@ const Shop = () => {
                     <div className="but">
                     {loadMoreButton()}
                     </div>
-                </div>
-                </div>
+             
+           </div>
+           </div>
         </Layout>
     );
 };

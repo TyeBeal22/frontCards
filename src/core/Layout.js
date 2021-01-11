@@ -17,6 +17,8 @@ const Layout = ({
 
 
     <div className="every">
+
+  
                <Navbar />
         <div className="jumbotron">
             <h2>{title}</h2>
