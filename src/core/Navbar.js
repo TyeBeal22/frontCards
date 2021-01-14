@@ -317,6 +317,21 @@ const drawer = (
             </ListItemText>
             </ListItem>
             )}
+            <ListItem>
+
+              <Link
+                    className="header-nav-item"
+                    to="/cart"
+                >
+                <ShoppingCartIcon style={{color:"#fff"}}/>
+                    {" "}
+                    <sup>
+                        <small className="cart-badge">{itemTotal()}</small>
+                    </sup>
+                </Link>
+            </ListItem>
+
+           
           </List>
         </SwipeableDrawer>
           <IconButton className={classes.drawerIconContainer}
