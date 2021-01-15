@@ -17,10 +17,12 @@ import Profile from './user/Profile';
 import ManageProducts from './admin/ManageProducts';
 import UpdateProduct from './admin/UpdateProduct';
 import UpdateCategory from './admin/updateCategory';
+import ScrollToTop from './ScrollToTop';
 
 const Routes = () => {
     return (
         <BrowserRouter>
+        <ScrollToTop />
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/shop" exact component={Shop} />

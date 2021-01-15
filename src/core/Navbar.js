@@ -347,7 +347,7 @@ const drawer = (
       <React.Fragment>
       <ElevationScroll>
 
-      <AppBar position="fixed" color="white" className={classes.appBar}>
+      <AppBar position="fixed" color="default" className={classes.appBar}>
 
         <ToolBar disableGutters>
         <Button component={Link} to="/" onClick={() => setValue(0)}>

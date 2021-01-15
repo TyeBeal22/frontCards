@@ -64,6 +64,7 @@ const Home = () => {
                 <div className="Vids" style={{backgroundImage: `url(${sports})`,backgroundColor: 'blue'}}>
                     
                   </div>
+               
 {/*
             <h2 className="mb-4">Best Sellers</h2>
             <div className="row">
@@ -74,7 +75,7 @@ const Home = () => {
                 ))}
             </div>
            */ }
-        </Layout>
+           </Layout>
     );
 };
 
